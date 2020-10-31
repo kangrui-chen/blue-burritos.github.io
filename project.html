@@ -1,0 +1,82 @@
+<!-- PROJECT! -->
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Blue Burrito's Environmental Map</title> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="map_style.css">
+        <link rel="stylesheet" href="header_style.css">
+
+        <!-- A Fancy Header (change opacity when scroll down) -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() >= 130){
+                        $(".topbar").css({"opacity" : "0"})
+                    }
+                    else if($(this).scrollTop() > 100 && $(this).scrollTop() <= 130){
+                        $(".topbar").css({"opacity" : "0.35"})
+                    }
+                    else if($(this).scrollTop() > 50 && $(this).scrollTop() <= 100){
+                        $(".topbar").css({"opacity" : "0.65"})
+                    }
+                    else {
+                        $(".topbar").css({"opacity" : "1"})
+                    }
+                })
+            })
+        </script>
+
+    </head>
+
+    <body>
+        <div class="topbar">
+            <h1>&nbsp Blue Burrito's Environmental Map</h1>
+
+            <div class="navbar">
+                <a href="project.html">&nbsp Home</a>
+            <a href="https://www.usnews.com/topics/subjects/pollution">News</a>
+            <div class="dropdown">
+                <button class="dropbtn">More Clickable Maps &#x25BE;
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="US_map.html">Downloaded from Online</a>
+                    <a href="US_map.html">Same as above</a>
+                    <a href="US_map.html">...</a>
+                </div>
+            </div> 
+            </div>
+        </div>
+
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+
+        <h2>Introduction</h2>
+        <p>
+            The map shows the pollution and population data of US states.            
+        </p>
+        <br>
+        <p class = "pbackground">
+            <!-- A free online clickable US map here in the link -->
+            <a href="US_map.html">Environment Map</a>
+        </p>
+
+        <div class = "container">
+            <img id = "pic" src = "my_US_map.jpg">
+            <button class = "btn btnCA" onclick="document.location='California.html'">California</button>
+            <button class = "btn btnNY" onclick="document.location='NewYork.html'">New York</button>
+
+            <!-- More buttons of states here -->
+        </div>
+        
+
+    </body>
+
+
+
+    <br>
+</html>
